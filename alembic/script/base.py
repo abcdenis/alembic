@@ -361,7 +361,6 @@ class ScriptDirectory(object):
             revs = self.revision_map.iterate_revisions(
                 destination, current_rev, implicit_base=True
             )
-            revs = list(revs)
             return [
                 migration.MigrationStep.upgrade_from_script(
                     self.revision_map, script
